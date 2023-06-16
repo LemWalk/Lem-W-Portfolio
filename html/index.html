@@ -15,81 +15,179 @@
 <title>Lemuel Walkinshaw Portfolio</title>
 </head>
 
+  <!-- =======================================
+  =========== Body ==================== -->
 
-<body>
+  <body>
 
   <header>
-    <nav>
+    <nav style="background-image: url(../img/purple-triangle.jpg);">
       <div>
-        <span><a href="#">L</a></span>
+        <div class="nav-link-initials"><a href="#">LW</a></div>
         <ul>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">My Portfolio</a></li>
-          <li><a href="#">Coding Examples</a></li>
-          <li><a href="#">SCS Scheme</a></li>
-          <li><a href="#">Contact Me</a></li>
+          <li class="nav-link"><a href="#">About Me</a></li>
+          <li class="nav-link"><a href="#">My Portfolio</a></li>
+          <li class="nav-link"><a href="#">Coding Examples</a></li>
+          <li class="nav-link"><a href="#">SCS Scheme</a></li>
+          <li class="nav-link"><a href="#">Contact Me</a></li>
         </ul>
       </div>
-    </nav>
-
-    
+    </nav>    
   </header>
 
   <main>
     <div>
 
-      <section class="portfolio">
+      <div class="hero" style="background-image: url(../img/purple-triangle.jpg);">        
+        <div class="hero-container">
 
+          <div class="hero-text-box">
+            <p class="hero-title">Hi My Name is Lemuel Walkinshaw</p>
+            <p class="hero-text">I am a Trainee Developer</p>
+          </div>
+
+          <div class="Scroll-down">
+            <span>Scroll Down</span>
+            <i class="fa-solid fa-chevron-down"></i>
+            
+          </div>
+        </div>
+      </div>
+
+      <section class="portfolio">
+        <div>
+
+          <div class="port-intro">
+            <h1>Welcome to My Portfolio</h1>
+            <p>below are just some of the many projects I have Created </p>
+          </div>
+          
+          <div class="port-outer">
+
+            <div class="port-item">
+              <a href="#">
+                <div class="port-img" style="background-image: url(../img/purple-triangle.jpg);">
+                  <span class="port-img-text">This is but a placeholder, awaiting an epic project to arrive!</span>
+                </div>
+                <div class="port-info">
+                  <h3>Project 1</h3>
+                  <p>View My Work <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+              </a> 
+            </div>
+
+            <div class="port-item">
+              <a href="#">
+                <div class="port-img" style="background-image: url(../img/purple-triangle.jpg);">
+                  <span class="port-img-text">This is but a placeholder, awaiting an epic project to arrive!</span>
+                </div>
+                <div class="port-info">
+                  <h3>Project 2</h3>
+                  <p>View My Work <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+              </a> 
+            </div>
+
+            <div class="port-item">
+              <a href="#">
+                <div class="port-img" style="background-image: url(../img/purple-triangle.jpg);">
+                  <span class="port-img-text">This is but a placeholder, awaiting an epic project to arrive!</span>
+                </div>
+                <div class="port-info">
+                  <h3>Project 3</h3>
+                  <p>View My Work <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+              </a> 
+            </div>
+
+            <div class="port-item">
+              <a href="#">
+                <div class="port-img" style="background-image: url(../img/purple-triangle.jpg);">
+                  <span class="port-img-text">This is but a placeholder, awaiting an epic project to arrive!</span>
+                </div>
+                <div class="port-info">
+                  <h3>Project 4</h3>
+                  <p>View My Work <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+              </a> 
+            </div>
+
+            <div class="port-item">
+              <a href="#">
+                <div class="port-img" style="background-image: url(../img/purple-triangle.jpg);">
+                  <span class="port-img-text">This is but a placeholder, awaiting an epic project to arrive!</span>
+                </div>
+                <div class="port-info">
+                  <h3>Project 5</h3>
+                  <p>View My Work <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+              </a> 
+            </div>
+
+            <div class="port-item">
+              <a href="#">
+                <div class="port-img" style="background-image: url(../img/purple-triangle.jpg);">
+                  <span class="port-img-text">This is but a placeholder, awaiting an epic project to arrive!</span>
+                </div>
+                <div class="port-info">
+                  <h3>Project 6</h3>
+                  <p>View My Work <i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+              </a> 
+            </div>
+                        
+          </div>
+
+
+        </div>
       </section>
 
 
       <div class="contact">
 
         <div class="contact-info">
-          <p></p><br>
-
-          <p></p><br>
-
-          <p></p><br>
-
+          <h2>Contact Me</h2>
+          <p>Want to work together??</p>
+          <p>Contact me on (insert telephone number)</p>
+          <p>Or email me at (insert email here)</p>
         </div>
 
-        <form action="#" method="get">
+        <form class="form-contact" action="#" method="get">
+          <div class="form-inner">
 
-          <div class="data-input">
-            <label for="fname"></label>
-            <input type="text" placeholder="First Name*">
-          </div>
+            <div class="data-input">
+              <label for="fname"></label>
+              <input id="input" type="text" placeholder="First Name*">
+            </div>
 
-          <div class="data-input">
-            <label for="lname"></label>
-            <input type="text" placeholder="Last Name*">
-          </div>
+            <div class="data-input">
+              <label for="lname"></label>
+              <input type="text" placeholder="Last Name*">
+            </div>
 
-          <div class="data-input">
-            <label for="e-mail"></label>
-            <input type="text" placeholder="E-mail Address*">
-          </div>
+            <div class="data-input">
+              <label for="e-mail"></label>
+              <input type="email" placeholder="E-mail Address*">
+            </div>
 
-          <div class="data-input">
-            <label for="e-mail"></label>
-            <input type="text" placeholder="Subject*">
-          </div>
+            <div class="data-input">
+              <label for="subject"></label>
+              <input type="text" placeholder="Subject*">
+            </div>
 
-          <div class="data-input">
-            <label for="e-mail"></label>
-            <input type="text" placeholder="Message*">
-          </div>
-          
-          <div class="btn-submit">
-            <input type="submit" value="Submit">
-          </div>
+            <div class="data-input">
+              <label for="message"></label>
+              <input type="text" placeholder="Message*">
+            </div>
+            
+            <div class="btn-submit">
+              <input type="submit" value="Submit">
+            </div>
 
+        </div>
         </form>
       </div>
 
     </div>
   </main>
-
-
 </body>

@@ -324,6 +324,124 @@ a {
   text-decoration: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.port-img {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=submit] {
+  border: solid pink 2px;
+  color: aqua;
+  background-color: seagreen;
+  padding: 10px 15px;
+}
+
 nav {
-  margin: 20px;
+  width: 200px;
+  position: fixed;
+  border-right: solid black 4px;
+  height: 100vh;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.nav-link-initials {
+  border-bottom: solid black 4px;
+  padding: 10px 20px;
+}
+.nav-link-initials a {
+  font-size: 64px;
+}
+
+.nav-link {
+  padding: 10px 20px;
+}
+
+main {
+  margin-left: 200px;
+}
+
+.hero {
+  height: 100vh;
+  background-size: 70%;
+  background-repeat: repeat;
+  opacity: 80%;
+  background-image: rgba(0, 0, 0, 0.5);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: grey;
+  opacity: 70%;
+  color: papayawhip;
+}
+
+.hero-title {
+  font-size: 44px;
+}
+
+.hero-text {
+  font-size: 24px;
+}
+
+.form-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+input[type=text], input[type=email] {
+  border: 0;
+  padding: 20px 10px;
+  background-color: #999;
+}
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder {
+  color: green;
+}
+input[type=text]::placeholder, input[type=email]::placeholder {
+  color: green;
+}
+
+.port-outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.port-item {
+  border: solid black 2px;
+  margin: 20px 0px;
+}
+
+.port-img-text {
+  background-color: rgba(128, 128, 128, 0.7);
+  color: #fff;
+  padding: 50px;
+  border-radius: 10px;
 }/*# sourceMappingURL=application.css.map */

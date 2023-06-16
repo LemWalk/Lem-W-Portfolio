@@ -1,3 +1,23 @@
 nav{
-    margin: 20px;
+    width: 200px;
+    position: fixed;
+    border-right: solid black 4px;
+    height: 100vh;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+
+}
+
+.nav-link-initials{
+    border-bottom: solid black 4px;
+    padding: 10px 20px;
+    a{font-size: 64px;
+    }
+}
+
+.nav-link{
+    padding: 10px 20px;
+
 }

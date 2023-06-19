@@ -6,8 +6,6 @@ nav{
     justify-content: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.8;
-
 }
 
 .nav-link-initials{
@@ -19,5 +17,7 @@ nav{
 
 .nav-link{
     padding: 10px 20px;
-
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
 }

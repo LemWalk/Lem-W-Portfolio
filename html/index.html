@@ -41,6 +41,27 @@
       <div class="hero" style="background-image: url(../img/purple-triangle.jpg);">        
         <div class="hero-container">
 
+<!-- ================ toggle button ================ -->
+
+        <div class="form-box">
+          <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="leftClick()">Light</button>
+            <button type="button" class="toggle-btn" onclick="rightClick()">Dark</button>
+          </div>
+        </div>
+
+
+
+
+<!-- ===============burger-menu ===================== -->
+
+          <div class="burger-menu active">
+            <div class="ham-bar bar-top"></div>
+            <div class="ham-bar bar-mid"></div>
+            <div class="ham-bar bar-bot"></div>
+          </div>
+
           <div class="hero-text-box">
             <p class="hero-title">Hi My Name is Lemuel Walkinshaw</p>
             <p class="hero-text">I am a Trainee Full Stack Developer</p>
@@ -53,6 +74,8 @@
           </div>
         </div>
       </div>
+
+<!-- ================ Portfolio ================ -->
 
       <section id="portfolio">
         <div>
@@ -190,4 +213,7 @@
 
     </div>
   </main>
-</body>
+  <script src="../js/main.js"></script>
+  <script src="../js/darkmode.js"></script>
+  </body>  
+</html>

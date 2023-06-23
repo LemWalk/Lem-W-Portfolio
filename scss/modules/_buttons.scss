@@ -6,3 +6,34 @@ input[type=submit]{
     background-color: seagreen;
     padding: 10px 15px;
 }
+
+.button-box{
+    display: flex;
+    flex-direction: row;
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.toggle-btn{
+    padding: 10px 40px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    text-align: center;
+}
+
+#btn{
+    left: 0;
+    top:0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background-color: yellow;
+    border-radius: 30px;
+    transition: 0.5s;
+}

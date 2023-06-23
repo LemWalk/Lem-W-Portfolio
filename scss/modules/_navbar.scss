@@ -21,3 +21,47 @@ nav{
     font-size: 30px;
     font-weight: 600;
 }
+
+.burger-menu{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer; 
+    padding: 15px;
+}
+
+.ham-bar{
+    width: 70%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.6s, opacity 0.8s, top 0.6s;
+    border-radius: 25px;
+}
+
+.bar-top{
+    top: 25%;
+
+}
+
+.bar-bot{
+    top: 75%;
+}
+
+.burger-menu.active .bar-top{
+transform: translate(-50%, -50%) rotate(-315deg);
+top: 50%;
+}
+
+.burger-menu.active .bar-mid{
+    opacity: 0;
+}
+
+.burger-menu.active .bar-bot{
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+}

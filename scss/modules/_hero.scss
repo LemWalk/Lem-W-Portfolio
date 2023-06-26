@@ -1,13 +1,9 @@
-main{
-    margin-left: 200px;
-}
+
 
 .hero{
     height: 100vh;
     background-size: 70%;
     background-repeat: repeat;
-    opacity: 80%;
-    background-image: rgba($color: #000000, $alpha: 0.5);
 }
 
 .hero-container{
@@ -24,16 +20,26 @@ main{
     padding: 20px;
     border-radius: 10px;
     background-color: grey;
-    opacity: 70%;
+    opacity: 75%;
     color: papayawhip;
+    width: 90%;
+
 }
 
 .hero-title{
-    font-size: 44px;
+    font-size: 26px;
 }
 
 .hero-text{
-    font-size: 24px;
+    font-size: 16px;
 
 }
 
+
+.scroll-down{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}

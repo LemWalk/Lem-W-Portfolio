@@ -36,44 +36,62 @@
   </header>
 
   <main>
-    <div>
+    <div class="container">
 
       <div class="hero" style="background-image: url(../img/purple-triangle.jpg);">        
         <div class="hero-container">
 
 <!-- ================ toggle button ================ -->
+          <div class="menu-btns">
 
-        <div class="form-box">
+        <!-- <div class="form-box">
           <div class="button-box">
             <div id="btn"></div>
-            <button type="button" class="toggle-btn" onclick="leftClick()">Light</button>
-            <button type="button" class="toggle-btn" onclick="rightClick()">Dark</button>
+            <button type="button" class="toggle-btn" onclick="leftClick()"><i class="fa-solid fa-sun"></i></button>
+            <button type="button" class="toggle-btn" onclick="rightClick()"><i class="fa-solid fa-moon"></i></button>
           </div>
-        </div>
+        </div> -->
 
 
 
 
 <!-- ===============burger-menu ===================== -->
 
-          <div class="burger-menu active">
+          <div class="off-screen-menu">
+            <ul class="off-screen-menu-list">
+              <li class="nav-link-off-screen"><a href="index.html">Home</a></li>
+              <li class="nav-link-off-screen"><a href="about.html">About Me</a></li>
+              <li class="nav-link-off-screen"><a href="index.html#portfolio">My Portfolio</a></li>
+              <li class="nav-link-off-screen"><a href="coding.html">Coding Examples</a></li>
+              <li class="nav-link-off-screen"><a href="scs.html">SCS Scheme</a></li>
+              <li class="nav-link-off-screen"><a href="index.html#contact">Contact Me</a></li>
+            </ul>
+          </div>
+
+          <div class="burger-menu ">
             <div class="ham-bar bar-top"></div>
             <div class="ham-bar bar-mid"></div>
             <div class="ham-bar bar-bot"></div>
           </div>
 
+        </div>
+
+<!-- ==================== hero text ================ -->
+
           <div class="hero-text-box">
-            <p class="hero-title">Hi My Name is Lemuel Walkinshaw</p>
-            <p class="hero-text">I am a Trainee Full Stack Developer</p>
+            <p class="hero-title"> Lemuel Walkinshaw</p>
+            <p class="hero-text">Aspiring Web Developer</p>
           </div>
 
-          <div class="Scroll-down">
+          <div class="scroll-down">
             <span>Scroll Down</span>
-            <i class="fa-solid fa-chevron-down"></i>
-            
+            <i class="fa-solid fa-chevron-down"></i>            
           </div>
+
+
         </div>
       </div>
+
 
 <!-- ================ Portfolio ================ -->
 

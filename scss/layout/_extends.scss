@@ -1,0 +1,49 @@
+
+@include mq(large){
+    main{
+        margin-left: 200px;
+    }
+
+    nav{
+        display: flex;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
+    .off-screen-menu-list{
+        display: none;
+    }
+
+    .hero-title{
+        font-size: 44px;
+    }
+
+    .hero-text{
+        font-size: 26px;
+    }
+
+    
+}
+
+
+@include mq(medium) {
+    .off-screen-menu-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .off-screen-menu-list>*{
+        flex: 1 1 50%;
+    }
+
+    .hero-title{
+        font-size: 36px;
+    }
+
+    .hero-text{
+        font-size: 20px;
+    }
+
+}

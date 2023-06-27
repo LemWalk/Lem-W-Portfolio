@@ -20,7 +20,8 @@
 
   <body>
 
-  <header>
+  <header id="nav-lo">
+
     <nav style="background-image: url(../img/purple-triangle.jpg);">
       <div>
         <div class="nav-link-initials"><a href="index.html">LW</a></div>
@@ -33,16 +34,17 @@
         </ul>
       </div>
     </nav>    
+
   </header>
 
   <main>
     <div class="container">
 
-      <div class="hero" style="background-image: url(../img/purple-triangle.jpg);">        
-        <div class="hero-container">
+      <div id="hero-lo" >        
+        <div class="hero-container" style="background-image: url(../img/purple-triangle.jpg);">
 
 <!-- ================ toggle button ================ -->
-          <div class="menu-btns">
+          <div id="menu-btns">
 
         <!-- <div class="form-box">
           <div class="button-box">
@@ -51,9 +53,6 @@
             <button type="button" class="toggle-btn" onclick="rightClick()"><i class="fa-solid fa-moon"></i></button>
           </div>
         </div> -->
-
-
-
 
 <!-- ===============burger-menu ===================== -->
 
@@ -68,7 +67,7 @@
             </ul>
           </div>
 
-          <div class="burger-menu ">
+          <div class="burger-menu">
             <div class="ham-bar bar-top"></div>
             <div class="ham-bar bar-mid"></div>
             <div class="ham-bar bar-bot"></div>
@@ -96,7 +95,7 @@
 <!-- ================ Portfolio ================ -->
 
       <section id="portfolio">
-        <div>
+        <div class="container-inner">
 
           <div class="port-intro">
             <h1>Welcome to My Portfolio</h1>
@@ -107,7 +106,7 @@
 
             <div class="port-item">
               <a href="#">
-                <div class="port-img" style="background-image: url(../img/purple-triangle.jpg);">
+                <div class="port-img" style="background-image: url(../img/nm-reflection.jpg);">
                   <span class="port-img-text">This is but a placeholder, awaiting an epic project to arrive!</span>
                 </div>
                 <div class="port-info">
@@ -119,7 +118,7 @@
 
             <div class="port-item">
               <a href="#">
-                <div class="port-img" style="background-image: url(../img/purple-triangle.jpg);">
+                <div class="port-img" style="background-image: url(../img/blue-hexagon.jpg);">
                   <span class="port-img-text">This is but a placeholder, awaiting an epic project to arrive!</span>
                 </div>
                 <div class="port-info">
@@ -167,7 +166,7 @@
 
             <div class="port-item">
               <a href="#">
-                <div class="port-img" style="background-image: url(../img/purple-triangle.jpg);">
+                <div class="port-img" style="background-image: url(../img/geo-forest.jpg);">
                   <span class="port-img-text">This is but a placeholder, awaiting an epic project to arrive!</span>
                 </div>
                 <div class="port-info">
@@ -184,10 +183,12 @@
       </section>
 
 
+<!-- ================= Contact Form =================== -->
+
       <div id="contact">
 
         <div class="contact-info">
-          <h2>Contact Me</h2>
+          <h2>Contact Me</h2><br>
           <p>Want to work together??</p>
           <p>Contact me on (insert telephone number)</p>
           <p>Or email me at (insert email here)</p>
@@ -196,7 +197,9 @@
         <form class="form-contact" action="#" method="get">
           <div class="form-inner">
 
-            <div class="data-input">
+            <div class="input-names">
+
+            <div class="data-input f-name">
               <label for="fname"></label>
               <input id="input" type="text" placeholder="First Name*">
             </div>
@@ -205,6 +208,8 @@
               <label for="lname"></label>
               <input type="text" placeholder="Last Name*">
             </div>
+
+          </div>
 
             <div class="data-input">
               <label for="e-mail"></label>

@@ -1,0 +1,21 @@
+.banner-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    background-color: fuchsia;
+}
+
+.banner-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-title{
+    margin: 40px;
+    font-size: 40px;
+}

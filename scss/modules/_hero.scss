@@ -1,4 +1,6 @@
-
+#hero-lo{
+    @extend %hero-lo;
+}
 
 .hero{
     height: 100vh;
@@ -9,7 +11,9 @@
 .hero-container{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    height: 100vh;
 }
 
 .hero-text-box{
@@ -27,11 +31,11 @@
 }
 
 .hero-title{
-    font-size: 26px;
+    font-size: 38px;
 }
 
 .hero-text{
-    font-size: 16px;
+    font-size: 24px;
 
 }
 

@@ -1,49 +1,104 @@
 
+//=========== Bases Layouts =======================
+
 @include mq(large){
-    main{
-        margin-left: 200px;
-    }
+  main{
+      margin-left: 200px;
+  }
+}
 
+//======= Nav Layout ===================
+
+%nav-lo{
+  @include mq(large){
     nav{
-        display: flex;
+      display: flex;
     }
-
-    .burger-menu{
-        display: none;
-    }
-
-    .off-screen-menu-list{
-        display: none;
-    }
-
-    .hero-title{
-        font-size: 44px;
-    }
-
-    .hero-text{
-        font-size: 26px;
-    }
-
-    
+  }
 }
 
 
-@include mq(medium) {
+//==========- Burger Menu & Off Screen Menu Layout ========
+
+%menu-btns{
+  @include mq(large){
+    .burger-menu{
+      display: none;
+    }
+    .off-screen-menu{
+      display: none;
+    }
+
     .off-screen-menu-list{
-        display: flex;
-        flex-wrap: wrap;
+      display: none;
+    }
+  }
+}
+
+//=========== Hero - Layout ===============================
+
+%hero-lo{
+  @include mq(large) {
+
+
+.hero-title{
+  font-size: 60px;
+}
+
+.hero-text{
+  font-size: 26px;
+  }
+}
+
+@include mq(medium) {
+.off-screen-menu-list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.off-screen-menu-list>*{
+    flex: 1 1 50%;
+    }
+  }
+}
+
+
+//======== Portfolio Layout ==========================
+%portfolio{
+@include mq(large){
+
+  .port-outer {
+    display: flex;
+    flex-direction: row;
+      flex-wrap: wrap;  
+  }
+
+  .port-outer>*{
+    flex: 1 1 calc(50% - 60px);    
+    }    
+  }
+}
+
+//============ Form Layout ==================
+
+%form-lo{
+  @include mq(large){
+    #contact{
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    .off-screen-menu-list>*{
-        flex: 1 1 50%;
+    #contact>*{
+      flex: 1 1 50%;
     }
 
-    .hero-title{
-        font-size: 36px;
+.input-names{
+  display: flex;
+  flex-wrap: wrap;
     }
 
-    .hero-text{
-        font-size: 20px;
+.input-names>*{
+  flex: 1 1 50%;
     }
-
+  }
 }

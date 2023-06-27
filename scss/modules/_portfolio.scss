@@ -1,3 +1,7 @@
+#portfolio{
+@extend %portfolio;
+}
+
 .port-outer{
     display: flex;
     flex-direction: column;
@@ -6,14 +10,38 @@
 }
 
 .port-item{
-    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    border: solid turquoise 4px;
     margin: 20px 0px;
+    border-radius: 15px;
+    width: 95%;
+    margin: 15px 30px;
+    &:hover{
+        transform: scale(1.02);
+        transition: 0.5s;
+        .port-img-text{
+            display: flex;
+        }
+    }
+}
+
+.port-img{
+    border-radius: 10px 10px 0px 0px;
 }
 
 .port-img-text{
-    background-color: rgba($color: grey, $alpha: 0.7);
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba($color: black, $alpha: 0.7);
     color: #fff;
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
 
+.port-info{
+padding: 5px 15px;
 }

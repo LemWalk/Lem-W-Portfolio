@@ -453,49 +453,17 @@ input[type=submit] {
   transition: 0.5s;
 }
 
-nav {
-  width: 200px;
-  position: fixed;
-  border-right: solid black 4px;
-  height: 100%;
-  justify-content: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: none;
-}
-
-.nav-link-initials {
-  border-bottom: solid black 4px;
-  padding: 10px 20px;
-}
-.nav-link-initials a {
-  font-size: 64px;
-}
-
-.nav-link {
-  padding: 10px 20px;
-  color: black;
-  font-size: 30px;
-  font-weight: 600;
-  width: 90%;
-  border-bottom: solid green 2px;
-}
-.nav-link:last-child {
-  border-bottom: none;
-}
-.nav-link:hover {
-  text-decoration: underline;
-  text-decoration-color: aqua;
-}
-
 #menu-btns {
   width: 100%;
   display: flex;
   flex-direction: row;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   gap: 20px;
   height: 80px;
   justify-content: right;
-  margin: 10px 20px 0px 0px;
+  margin: 10px;
 }
 
 .burger-menu {
@@ -572,6 +540,41 @@ nav {
   border-width: 90%;
 }
 
+nav {
+  width: 200px;
+  position: fixed;
+  border-right: solid black 4px;
+  height: 100%;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.nav-link-initials {
+  border-bottom: solid black 4px;
+  padding: 10px 20px;
+}
+.nav-link-initials a {
+  font-size: 64px;
+}
+
+.nav-link {
+  padding: 10px 20px;
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  width: 90%;
+  border-bottom: solid green 2px;
+}
+.nav-link:last-child {
+  border-bottom: none;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: aqua;
+}
+
 .hero {
   height: 100vh;
   background-size: 70%;
@@ -581,8 +584,8 @@ nav {
 .hero-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
@@ -612,6 +615,8 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  top: 30vh;
 }
 
 .form-contact {
@@ -736,4 +741,72 @@ input[type=text]::placeholder, input[type=email]::placeholder {
 .banner-title {
   margin: 40px;
   font-size: 40px;
+}
+
+.about-me-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 5%;
+}
+
+.about-me-text-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.about-info {
+  font-size: 18px;
+  width: 100%;
+}
+
+.tech-stack-outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.tech-stack-title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.icn-tech-stack {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  transform: scale(1.5);
+  opacity: 0.9;
+}
+
+.scs-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.scs-box-item {
+  margin: 30px 5%;
+}
+.scs-box-item h3 {
+  margin-bottom: 10px;
+  font-size: large;
 }/*# sourceMappingURL=application.css.map */

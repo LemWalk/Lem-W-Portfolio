@@ -1,0 +1,52 @@
+
+.about-me-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 5%;
+    
+}
+
+.about-me-text-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.about-info{
+    font-size: 18px;
+    width: 100%;
+}
+
+.tech-stack-outer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    height: fit-content;
+}
+
+.tech-stack-title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.tech-stack{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.icn-tech-stack{
+    width: fit-content;
+    height: fit-content;
+    transform: scale(1.5);
+    opacity: 0.9;
+}

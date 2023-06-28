@@ -1,0 +1,15 @@
+
+.scs-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.scs-box-item{
+    margin: 30px 5%;
+    h3{
+        margin-bottom: 10px;
+        font-size: large;
+    }
+
+}

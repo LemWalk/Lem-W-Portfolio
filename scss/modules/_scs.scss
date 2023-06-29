@@ -1,4 +1,6 @@
 
+
+
 .scs-box{
     display: flex;
     flex-direction: column;
@@ -14,5 +16,9 @@
         margin-bottom: 15px;
         font-size: larger;
     }
+}
 
+.bot-boxes{
+    display: flex;
+    flex-direction: column;
 }

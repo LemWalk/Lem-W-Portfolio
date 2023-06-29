@@ -13,16 +13,17 @@
     justify-content: center;
     height: 100vh;
     background-color: $color-secondary-1;
+    background-repeat: none;
+    background-size: cover;
 }
 
 .hero-text-box{
-    display: flex;
     flex-direction: column;
     justify-content: center; 
     text-align: center;   
     padding: 20px;
     border-radius: 10px;
-    background-color: $color-tertiary-1;
+    background-color: $color-clash-2;
     border: solid $color-primary-1 4px;
     border-radius: 10px;
     color: #000;
@@ -31,11 +32,11 @@
 }
 
 .hero-title{
-    font-size: 38px;
+    font-size: 30px;
 }
 
 .hero-text{
-    font-size: 24px;
+    font-size: 16px;
 
 }
 
@@ -43,10 +44,14 @@
 .scroll-down{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-top: 45%;
     align-items: center;
-    position: relative;
+    padding: 10px;
+    margin: 20px 0px;
+    font-weight: 600;
+    color: #000;
+    &:hover{
+        color: #667;
+    }
     
 
 }

@@ -89,16 +89,17 @@
     }
 
     #contact>*{
-      flex: 1 1 50%;
+      flex: 1 1 calc(50% - 200px);
     }
 
 .input-names{
   display: flex;
-  flex-wrap: wrap;
-    }
-
-.input-names>*{
-  flex: 1 1 50%;
+  flex-direction: row;
+  gap: 20px;
     }
   }
 }
+
+
+//========= SCS Layout ==============
+

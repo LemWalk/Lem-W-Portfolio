@@ -9,12 +9,19 @@
     align-items: center;
 }
 
+.port-intro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .port-item{
     display: flex;
     flex-direction: column;
     background-size: cover;
-    border: solid turquoise 4px;
-    margin: 20px 0px;
+    border: solid $color-primary-1 4px;
     border-radius: 15px;
     width: 95%;
     margin: 15px 30px;
@@ -35,13 +42,20 @@
     display: none;
     width: 100%;
     height: 100%;
+    justify-content: center;
     text-align: center;
-    background-color: rgba($color: black, $alpha: 0.7);
+    align-items: center;
+    background-color: rgba($color: black, $alpha: 0.5);
     color: #fff;
     padding: 50px;
     border-radius: 10px 10px 0px 0px;
+    font-size: 30px;
 }
 
 .port-info{
 padding: 5px 15px;
+color: #000;
+background-color: $color-secondary-2;
+border-radius: 0px 0px 10px 10px;
+
 }

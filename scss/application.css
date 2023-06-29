@@ -335,6 +335,7 @@ main {
 .container-inner {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 @media (min-width: 992px) {
@@ -395,14 +396,12 @@ main {
     flex-wrap: wrap;
   }
   #contact #contact > * {
-    flex: 1 1 50%;
+    flex: 1 1 calc(50% - 200px);
   }
   #contact .input-names {
     display: flex;
-    flex-wrap: wrap;
-  }
-  #contact .input-names > * {
-    flex: 1 1 50%;
+    flex-direction: row;
+    gap: 20px;
   }
 }
 
@@ -427,6 +426,9 @@ main {
   padding: 10px;
   text-align: center;
 }
+.placeholder h2 {
+  font-size: 30px;
+}
 
 .port-img {
   display: flex;
@@ -438,10 +440,15 @@ main {
 }
 
 input[type=submit] {
-  border: solid pink 2px;
-  color: aqua;
-  background-color: seagreen;
+  border: solid #b09ee9 2px;
+  border-radius: 5px;
+  color: #000;
+  background-color: #D7E99E;
   padding: 10px 15px;
+}
+input[type=submit]:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
 }
 
 .button-box {
@@ -618,16 +625,17 @@ nav {
   justify-content: center;
   height: 100vh;
   background-color: #fad4c0;
+  background-repeat: none;
+  background-size: cover;
 }
 
 .hero-text-box {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  background-color: #b09ee9;
+  background-color: #D7E99E;
   border: solid #64b6ac 4px;
   border-radius: 10px;
   color: #000;
@@ -635,20 +643,35 @@ nav {
 }
 
 .hero-title {
-  font-size: 38px;
+  font-size: 30px;
 }
 
 .hero-text {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .scroll-down {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: 45%;
   align-items: center;
-  position: relative;
+  padding: 10px;
+  margin: 20px 0px;
+  font-weight: 600;
+  color: #000;
+}
+.scroll-down:hover {
+  color: #667;
+}
+
+.contact-title {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+  font-size: 30px;
+  align-items: center;
+  gap: 20px;
 }
 
 .form-contact {
@@ -656,21 +679,19 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
   margin: 20px 5%;
-  border: solid brown 3px;
+  border: solid #b09ee9 4px;
   border-radius: 10px;
   padding: 20px;
 }
-.contact-info h2 {
-  font-size: 24px;
-}
 .contact-info p {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .form-inner {
@@ -681,8 +702,15 @@ nav {
   width: 90%;
   padding: 20px;
   gap: 10px;
-  background-color: pink;
+  border: solid #b09ee9 4px;
   border-radius: 10px;
+}
+
+.input-names {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 10px;
 }
 
 .data-input {
@@ -695,18 +723,15 @@ input[type=text], input[type=email] {
   width: auto;
   border: 0;
   padding: 20px 10px;
-  background-color: #999;
+  background-color: #D7E99E;
+  border: solid #b09ee9 2px;
+  border-radius: 5px;
 }
 input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder {
-  color: green;
+  color: #000;
 }
 input[type=text]::placeholder, input[type=email]::placeholder {
-  color: green;
-}
-
-.f-name {
-  display: flex;
-  width: 100%;
+  color: #000;
 }
 
 .port-outer {
@@ -716,12 +741,19 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   align-items: center;
 }
 
+.port-intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .port-item {
   display: flex;
   flex-direction: column;
   background-size: cover;
-  border: solid turquoise 4px;
-  margin: 20px 0px;
+  border: solid #64b6ac 4px;
   border-radius: 15px;
   width: 95%;
   margin: 15px 30px;
@@ -742,15 +774,21 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   display: none;
   width: 100%;
   height: 100%;
+  justify-content: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 50px;
   border-radius: 10px 10px 0px 0px;
+  font-size: 30px;
 }
 
 .port-info {
   padding: 5px 15px;
+  color: #000;
+  background-color: #fee9e1;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .banner-top {
@@ -846,4 +884,9 @@ input[type=text]::placeholder, input[type=email]::placeholder {
 .scs-box-item h3 {
   margin-bottom: 15px;
   font-size: larger;
+}
+
+.bot-boxes {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=application.css.map */

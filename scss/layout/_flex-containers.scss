@@ -1,0 +1,23 @@
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid $color-tertiary-1;
+    border-radius: 10px;
+    background-color: $color-secondary-1;
+    color: #000;
+    height: 200px;
+    width: 70%;
+    padding :10px;
+    text-align: center;
+
+}

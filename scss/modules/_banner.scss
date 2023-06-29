@@ -3,7 +3,9 @@
     flex-direction: column;
     justify-content: center;
     height: 150px;
-    background-color: fuchsia;
+    background-color: $color-secondary-1;
+    color: black ;
+    border-bottom: $color-tertiary-1 solid 2px;
 }
 
 .banner-inner{

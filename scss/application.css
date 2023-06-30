@@ -750,6 +750,10 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   text-align: center;
 }
 
+.port-title {
+  text-align: center;
+}
+
 .port-item {
   display: flex;
   flex-direction: column;

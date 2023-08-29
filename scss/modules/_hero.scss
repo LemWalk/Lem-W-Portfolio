@@ -31,15 +31,33 @@
 
 }
 
-.hero-title{
+#hero-title{
     font-size: 30px;
 }
 
 .hero-text{
-    font-size: 16px;
-
+    font-size: 16px
 }
 
+#cursor{
+    display: inline-flex;
+    height: 24px;
+    width: 2px;
+    background-color: red;
+    animation: blink 1s linear infinite;
+    
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+}
 
 .scroll-down{
     display: flex;

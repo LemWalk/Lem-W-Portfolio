@@ -362,11 +362,14 @@ main {
 }
 
 @media (min-width: 992px) {
-  #hero-lo .hero-title {
+  #hero-lo #hero-title {
     font-size: 60px;
   }
-  #hero-lo .hero-text {
+  #hero-lo #hero-text {
     font-size: 26px;
+  }
+  #hero-lo #cursor {
+    height: 60px;
   }
 }
 @media (min-width: 768px) {
@@ -390,6 +393,11 @@ main {
   }
 }
 
+@media (min-width: 576px) {
+  #contact .text-small {
+    font-size: 16px;
+  }
+}
 @media (min-width: 992px) {
   #contact #contact {
     display: flex;
@@ -642,7 +650,7 @@ nav {
   width: 90%;
 }
 
-.hero-title {
+#hero-title {
   font-size: 30px;
 }
 
@@ -650,6 +658,22 @@ nav {
   font-size: 16px;
 }
 
+#cursor {
+  display: inline-flex;
+  height: 24px;
+  width: 2px;
+  background-color: red;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}
 .scroll-down {
   display: flex;
   flex-direction: column;
@@ -732,6 +756,10 @@ input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder {
 }
 input[type=text]::placeholder, input[type=email]::placeholder {
   color: #000;
+}
+
+.text-small {
+  font-size: 15px;
 }
 
 .port-outer {

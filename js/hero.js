@@ -1,6 +1,5 @@
 console.log('Welcome to the DOJO rookie!');
 
-
 //===============================
 
 // This is a JavaScript code for a typewriter effect with two messages
@@ -11,6 +10,8 @@ console.log('Welcome to the DOJO rookie!');
 // Define the messages and the elements
 const messages = ["Lemuel Walkinshaw", "Aspiring Web Developer"];
 const elements = [document.getElementById("hero-title"), document.getElementById("hero-text")];
+let vw = window.innerWidth;
+
 
 // Define a function to type a message on an element
 function typeMessage(message, element, callback) {
@@ -31,10 +32,14 @@ function typeMessage(message, element, callback) {
 
 // Define a function to run the typewriter effect
 function runTypewriter() {
-  // Type the first message on the first element
-  typeMessage(messages[0], elements[0], function() {
+   // Change the font size of the first element to 30px
+    elements[0].style.fontSize = "30px";
+   // Change the font size of the second element to 30px
+    elements[1].style.fontSize = "18px";
+    // Type the first message on the first element
+  typeMessage(messages[0], elements[0], function() {      
     // Wait for 1 second before typing the second message on the second element
-    setTimeout(function() {
+    setTimeout(function() {    
       typeMessage(messages[1], elements[1], function() {
         // Do nothing after typing the second message
       });
@@ -44,3 +49,5 @@ function runTypewriter() {
 
 // Run the typewriter effect on loading the page
 window.onload = runTypewriter;
+
+

@@ -7,6 +7,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="js/slick/slick.css">
+<link rel="stylesheet" href="js/slick/slick-theme.css">
 <link rel="stylesheet" href="scss/application.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +31,8 @@
           <li class="nav-link"><a href="coding.html">Coding Examples</a></li>
           <li class="nav-link"><a href="scs.html">SCS Scheme</a></li>
           <li class="nav-link"><a href="index.html#contact">Contact Me</a></li>
+          <li class="nav-link"><a target="_blank" rel="noopener" href="https://github.com/LemWalk"><i class="fa-brands fa-github"></i>My GitHub</a></li>
+
         </ul>
       </div>
     </nav>    
@@ -63,6 +67,7 @@
                   <li class="nav-link-off-screen"><a href="coding.html">Coding Examples</a></li>
                   <li class="nav-link-off-screen"><a href="scs.html">SCS Scheme</a></li>
                   <li class="nav-link-off-screen"><a href="index.html#contact">Contact Me</a></li>
+                  <li class="nav-link-off-screen"><a target="_blank" rel="noopener" href="https://github.com/LemWalk"><i class="fa-brands fa-github"></i>My GitHub</a></li>
                 </ul>
               </div>
       
@@ -82,11 +87,27 @@
 
       <div class="flex-col">
       <div class="placeholder">
-        <h2 class="placeholder-title">Coding Examples Coming Soon...</h2>
+
+
+        <h2 class="placeholder-title">Burger Menu JavaScript Function</h2>
+        <div class="img-outer">
+          <div class="img-container"><p class="img-desc">
+            Below is a screenshot of a JavaScript function I used on my portfolio website for the burger menu button and side menu.
+            The function is designed to add the class 'active' when clicked, which transforms the menu button and displays the side menu. 
+            When the button is clicked again, it will close the menu and return to its former state, however, clicking the links didn't always work as intended.
+            This is because the original function was designed to remove the 'active' class when the button was clicked and not the link, so a  separate function was created to ensure the menu closed when the button or a link was clicked. 
+            
+          </p></div>
+          <div class="img-container"><img src="img/burger-menu-screenshot.jpg" alt="JavaScript code for a burger menu function"></div>
+        </div>
       </div>
+
+
     </div>
 
   </main>
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="js/slick/slick.min.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/darkmode.js"></script>
 </body>

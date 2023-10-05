@@ -7,20 +7,23 @@
 }
 
 .placeholder{
-    margin-top: 50px;
+    margin: 50px 0px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid $color-tertiary-1;
+    border: solid $color-tertiary-1 5px;
     border-radius: 10px;
     background-color: $color-secondary-1;
     color: #000;
-    height: 200px;
-    width: 70%;
+    height: auto;
+    width: 80%;
     padding :10px;
     text-align: center;
     h2{
         font-size: 30px;
+        padding: 20px 0px;
+        text-decoration: underline;
     }
 
 }

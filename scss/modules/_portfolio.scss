@@ -58,9 +58,11 @@
 }
 
 .port-info{
-padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+padding: 10px 15px;
 color: #000;
 background-color: $color-secondary-2;
 border-radius: 0px 0px 10px 10px;
-
 }

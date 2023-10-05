@@ -40,14 +40,13 @@
 %hero-lo{
   @include mq(large) {
 
+#hero-title{
+  font-size: 60px;
+}
 
-// #hero-title{
-//   font-size: 60px;
-// }
-
-// #hero-text{
-//   font-size: 26px;
-//   }
+#hero-text{
+  font-size: 26px;
+  }
 }
 
 @include mq(medium) {

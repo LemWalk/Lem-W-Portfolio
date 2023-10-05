@@ -1,5 +1,3 @@
-console.log('Welcome to the DOJO rookie!');
-
 //===============================
 
 // This is a JavaScript code for a typewriter effect with two messages

@@ -18,11 +18,11 @@
 }
 
 .hero-text-box{
+    display: flex;
     flex-direction: column;
     justify-content: center; 
     text-align: center;   
     padding: 20px;
-    border-radius: 10px;
     background-color: $color-clash-2;
     border: solid $color-primary-1 4px;
     border-radius: 10px;
@@ -30,13 +30,13 @@
     width: 90%;
 }
 
-// #hero-title{
-//     font-size: 30px;
-// }
+#hero-title{
+    font-size: 30px;
+}
 
-// #hero-text{
-//     font-size: 16px
-// }
+#hero-text{
+    font-size: 16px
+}
 
 
 .scroll-down{

@@ -412,6 +412,12 @@ main {
   }
 }
 
+@media (min-width: 992px) {
+  #scs .img-container-scs {
+    display: flex;
+  }
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -475,7 +481,7 @@ img {
 }
 
 .img-container-scs {
-  display: flex;
+  display: none;
   flex-direction: column;
   margin: 20px 0px;
   border: solid 5px #b09ee9;
@@ -936,10 +942,6 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   opacity: 0.9;
 }
 
-#scs {
-  display: flex;
-}
-
 .scs-box {
   display: flex;
   flex-direction: column;
@@ -953,7 +955,7 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   padding: 10px;
   border: solid #b09ee9 5px;
   border-radius: 10px;
-  width: 90%;
+  width: 100%;
   margin: 20px 0px;
 }
 .scs-box-item h3 {

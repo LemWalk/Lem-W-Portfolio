@@ -1,7 +1,6 @@
 
 #scs{
-    display: flex;
-   
+@extend %scs-lo
 }
 
 .scs-box{
@@ -17,7 +16,7 @@
     padding :10px;
     border: solid $color-tertiary-1 5px;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     margin: 20px 0px;
     h3{
         margin-bottom: 15px;

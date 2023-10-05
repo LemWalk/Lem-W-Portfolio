@@ -109,3 +109,10 @@
 
 //========= SCS Layout ==============
 
+%scs-lo{
+  @include mq(large) {
+    .img-container-scs{
+      display: flex;
+    }
+  }
+}

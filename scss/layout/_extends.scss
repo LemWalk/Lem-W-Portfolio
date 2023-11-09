@@ -67,9 +67,9 @@
 @include mq(large){
 
   .port-outer {
-    display: flex;
     flex-direction: row;
       flex-wrap: wrap;  
+      margin: 0px 5%;
   }
 
   .port-outer>*{

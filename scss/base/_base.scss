@@ -8,6 +8,11 @@
 	scroll-behavior: smooth;
 }
 
+body{
+	background-color: rgba($color: #b09ee9, $alpha: 0.2);
+}
+
+
 
 ul,ol{
 	list-style: none;
@@ -30,4 +35,6 @@ main{
 	display: flex;
 	flex-direction: column;	
 	width: 100%;
+	margin: 0 auto;
+	max-width: 1440px;
 }

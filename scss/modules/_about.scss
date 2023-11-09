@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30px 5%;
+    padding: 20px 0;
     
 }
 
@@ -18,7 +18,7 @@
 
 .about-info{
     font-size: 18px;
-    width: 100%;
+    line-height: 24px;
 }
 
 .tech-stack-outer{
@@ -26,7 +26,6 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 50px;
-    height: fit-content;
 }
 
 .tech-stack-title{
@@ -37,6 +36,7 @@
 .tech-stack{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -45,8 +45,6 @@
 }
 
 .icn-tech-stack{
-    width: fit-content;
-    height: fit-content;
     transform: scale(1.5);
     opacity: 0.9;
 }

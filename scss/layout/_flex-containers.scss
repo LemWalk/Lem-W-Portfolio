@@ -6,8 +6,14 @@
     align-items: center;
 }
 
+.code-outer{
+    max-width: 95%;
+    margin: 20px auto;
+}
+
+
 .placeholder{
-    margin: 50px 0px;
+    margin: 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,9 +23,11 @@
     background-color: $color-secondary-1;
     color: #000;
     height: auto;
-    width: 80%;
-    padding :10px;
+    width: 90%;
     text-align: center;
+    padding: 0;
+    gap: 20px;
+    padding: 20px 0px;
     h2{
         font-size: 30px;
         padding: 20px 0px;
@@ -27,3 +35,21 @@
     }
 
 }
+
+.code-example{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    overflow: auto;
+}
+
+.code-block{
+    border: solid $color-tertiary-1 5px;
+    border-radius: 10px;
+    background-color: $color-secondary-1;
+    height: auto;
+    width: 90%;
+    padding: 0;
+    margin: 20px auto;
+}
+

@@ -27,9 +27,10 @@ width: 90%;
 .img-container{
     display: flex;
     flex-direction: column;
-    margin: 20px;
     border: solid 5px $color-tertiary-1;
     border-radius: 5px;
+    width: 90%;
+    margin: 20px auto;
 }
 
 .img-container-scs{
@@ -45,7 +46,13 @@ width: 90%;
 
 .img-desc{
     padding: 15px;
-    background-color: $color-secondary-2
+    background-color: $color-secondary-2;
+    line-height: 26px;
+}
+
+.slick-dots li button:before{
+    font-size: 16px;
+
 }
 
 

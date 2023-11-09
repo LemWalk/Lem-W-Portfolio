@@ -30,3 +30,4 @@ function toggleMenu() {
     // Add an event listener to each element to call the closeMenu function when clicked
     navLink.addEventListener('click', closeMenu);
   }
+

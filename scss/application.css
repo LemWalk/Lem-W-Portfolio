@@ -317,6 +317,10 @@ template {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: rgba(176, 158, 233, 0.2);
+}
+
 ul, ol {
   list-style: none;
 }
@@ -338,6 +342,8 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 @media (min-width: 992px) {
@@ -383,9 +389,9 @@ main {
 
 @media (min-width: 992px) {
   #portfolio .port-outer {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 0px 5%;
   }
   #portfolio .port-outer > * {
     flex: 1 1 calc(50% - 60px);
@@ -425,8 +431,13 @@ main {
   align-items: center;
 }
 
+.code-outer {
+  max-width: 95%;
+  margin: 20px auto;
+}
+
 .placeholder {
-  margin: 50px 0px;
+  margin: 20px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -436,14 +447,33 @@ main {
   background-color: #fad4c0;
   color: #000;
   height: auto;
-  width: 80%;
-  padding: 10px;
+  width: 90%;
   text-align: center;
+  padding: 0;
+  gap: 20px;
+  padding: 20px 0px;
 }
 .placeholder h2 {
   font-size: 30px;
   padding: 20px 0px;
   text-decoration: underline;
+}
+
+.code-example {
+  width: 100%;
+  height: 400px;
+  margin: 0;
+  overflow: auto;
+}
+
+.code-block {
+  border: solid #b09ee9 5px;
+  border-radius: 10px;
+  background-color: #fad4c0;
+  height: auto;
+  width: 90%;
+  padding: 0;
+  margin: 20px auto;
 }
 
 img {
@@ -475,9 +505,10 @@ img {
 .img-container {
   display: flex;
   flex-direction: column;
-  margin: 20px;
   border: solid 5px #b09ee9;
   border-radius: 5px;
+  width: 90%;
+  margin: 20px auto;
 }
 
 .img-container-scs {
@@ -494,6 +525,11 @@ img {
 .img-desc {
   padding: 15px;
   background-color: #fee9e1;
+  line-height: 26px;
+}
+
+.slick-dots li button:before {
+  font-size: 16px;
 }
 
 input[type=submit] {
@@ -701,6 +737,8 @@ nav {
   border-radius: 10px;
   color: #000;
   width: 90%;
+  margin: auto;
+  max-width: 1440px;
 }
 
 #hero-title {
@@ -722,6 +760,13 @@ nav {
 }
 .scroll-down:hover {
   color: #667;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0px 5%;
 }
 
 .contact-title {
@@ -746,7 +791,6 @@ nav {
 .contact-info {
   display: flex;
   flex-direction: column;
-  margin: 20px 5%;
   border: solid #b09ee9 4px;
   border-radius: 10px;
   padding: 20px;
@@ -760,7 +804,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   padding: 20px;
   gap: 10px;
   border: solid #b09ee9 4px;
@@ -784,8 +828,8 @@ input[type=text], input[type=email] {
   width: auto;
   border: 0;
   padding: 20px 10px;
-  background-color: #D7E99E;
-  border: solid #b09ee9 2px;
+  background-color: #d7e99e;
+  border: solid #b09ee9 3px;
   border-radius: 5px;
 }
 input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder {
@@ -804,6 +848,8 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+  margin: 0 5%;
 }
 
 .port-intro {
@@ -813,6 +859,7 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 20px;
 }
 
 .port-title {
@@ -826,7 +873,7 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   border: solid #64b6ac 4px;
   border-radius: 15px;
   width: 90%;
-  margin: 15px 30px;
+  margin: 0px;
 }
 .port-item:hover {
   transform: scale(1.02);
@@ -847,7 +894,7 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   justify-content: center;
   text-align: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
   padding: 50px;
   border-radius: 10px 10px 0px 0px;
@@ -856,6 +903,7 @@ input[type=text]::placeholder, input[type=email]::placeholder {
 
 .port-info {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   gap: 10px;
   padding: 10px 15px;
@@ -893,7 +941,7 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30px 5%;
+  padding: 20px 0;
 }
 
 .about-me-text-inner {
@@ -906,7 +954,7 @@ input[type=text]::placeholder, input[type=email]::placeholder {
 
 .about-info {
   font-size: 18px;
-  width: 100%;
+  line-height: 24px;
 }
 
 .tech-stack-outer {
@@ -914,8 +962,6 @@ input[type=text]::placeholder, input[type=email]::placeholder {
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .tech-stack-title {
@@ -926,6 +972,7 @@ input[type=text]::placeholder, input[type=email]::placeholder {
 .tech-stack {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -934,10 +981,6 @@ input[type=text]::placeholder, input[type=email]::placeholder {
 }
 
 .icn-tech-stack {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   transform: scale(1.5);
   opacity: 0.9;
 }

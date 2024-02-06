@@ -82,10 +82,7 @@
                 <div class="ham-bar bar-bot"></div>
               </div>
       
-          </div>
-
-      
-
+          </div>   
 
     </div>
       </div>

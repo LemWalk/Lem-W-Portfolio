@@ -824,23 +824,31 @@ nav {
   width: 100%;
 }
 
-input[type=text], input[type=email] {
+.input-box {
   width: auto;
   border: 0;
   padding: 20px 10px;
   background-color: #d7e99e;
   border: solid #b09ee9 3px;
   border-radius: 5px;
+  outline: none;
 }
-input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder {
-  color: #000;
+.input-box::-moz-placeholder {
+  color: #667;
 }
-input[type=text]::placeholder, input[type=email]::placeholder {
-  color: #000;
+.input-box::placeholder {
+  color: #667;
+}
+.input-box:focus {
+  border: solid #64b6ac 3px;
 }
 
 .text-small {
   font-size: 15px;
+}
+
+textarea {
+  min-height: 100px;
 }
 
 .port-outer {

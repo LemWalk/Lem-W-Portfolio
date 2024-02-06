@@ -64,18 +64,38 @@ margin-bottom: 30px;
     width: 100%;
 }
 
-input[type=text], input[type=email]{
+// input[type=text], input[type=email]{
+//     width: auto;
+//     border: 0;
+//     padding: 20px 10px;
+//     background-color: rgba($color: #D7E99E, $alpha: 1);
+//     border: solid $color-tertiary-1 3px;
+//     border-radius: 5px;
+//     &::placeholder{
+//         color: #000;
+//     }
+// }
+
+.input-box{
     width: auto;
     border: 0;
     padding: 20px 10px;
     background-color: rgba($color: #D7E99E, $alpha: 1);
     border: solid $color-tertiary-1 3px;
     border-radius: 5px;
+    outline: none;
     &::placeholder{
-        color: #000;
+        color: #667;
+    }
+    &:focus{
+        border: solid $color-primary-1 3px;
     }
 }
 
 .text-small{
     font-size: 15px;
+}
+
+textarea{
+    min-height: 100px;
 }

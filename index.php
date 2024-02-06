@@ -1,93 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <!-- =======================================
-  ===========HEAD ==================== -->
-
-<head>
-<meta charset="utf-8">
-<meta name="description" content="Trainee web developer portfolio website.">
-<meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, SCS scheme, Scion Coalition Scheme">
-<meta name="author" content="Lemuel Walkinshaw">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="js/slick/slick.css">
-<link rel="stylesheet" href="js/slick/slick-theme.css">
-<link rel="icon" href="img/purple-triangle.jpg">
-<link rel="stylesheet" href="scss/application.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/fac1c8a231.js" crossorigin="anonymous"></script>
-<title>Lemuel Walkinshaw Portfolio</title>
-</head>
-
-  <!-- =======================================
-  =========== Body ==================== -->
-
-  <body>
-
-<!-- =============Side Nav ============= -->
-
-
-  <header id="nav-lo">
-
-    <nav>
-      <div>
-        <div class="nav-link-initials"><a href="index.html">LW</a></div>
-        <ul>
-          <li class="nav-link"><a href="about.html">About Me</a></li>
-          <li class="nav-link"><a href="index.html#portfolio">My Portfolio</a></li>
-          <li class="nav-link"><a href="coding.html">Coding Examples</a></li>
-          <li class="nav-link"><a href="scs.html">SCS Scheme</a></li>
-          <li class="nav-link"><a href="index.html#contact">Contact Me</a></li>
-          <li class="nav-link"><a class="nav-link-item" target="_blank" rel="noopener" href="https://github.com/LemWalk"><i class="fa-brands fa-github"></i>My GitHub</a></li>
-
-        </ul>
-      </div>
-    </nav>    
-
-  </header>
-
-<!-- =============Main Start ============= -->
-
-  <main>
-    <div class="container">
-
-      <div id="hero-lo" >        
-        <div class="hero-container" style="background-image: url(./img/pb-triangle-1.jpg);">
-
-<!-- ================ toggle button ================ -->
-          <div id="menu-btns">
-
-        <!-- <div class="form-box">
-          <div class="button-box">
-            <div id="btn"></div>
-            <button type="button" class="toggle-btn" onclick="leftClick()"><i class="fa-solid fa-sun"></i></button>
-            <button type="button" class="toggle-btn" onclick="rightClick()"><i class="fa-solid fa-moon"></i></button>
-          </div>
-        </div> -->
-
-<!-- ===============burger-menu ===================== -->
-
-          <div class="off-screen-menu">
-            <ul class="off-screen-menu-list">
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="index.html">Home</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="about.html">About Me</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="index.html#portfolio">My Portfolio</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="coding.html">Coding Examples</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="scs.html">SCS Scheme</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="index.html#contact">Contact Me</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" target="_blank" rel="noopener" href="https://github.com/LemWalk"><i class="fa-brands fa-github"></i>My GitHub</a></li>
-            </ul>
-          </div>
-
-          <div class="burger-menu">
-            <div class="ham-bar bar-top"></div>
-            <div class="ham-bar bar-mid"></div>
-            <div class="ham-bar bar-bot"></div>
-          </div>
-
-        </div>
+<?php 
+include'inc/form_validation.php';
+include'inc/header.php'; 
+?>
 
 <!-- ==================== hero text ================ -->
 
@@ -215,36 +129,36 @@
 
         </div>
 
-        <form class="form-contact" action="#" method="get">
+        <form class="form-contact" action="#" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> ">
           <div class="form-inner">
 
             <div class="input-names">
 
             <div class="data-input">
               <label for="fname"></label>
-              <input id="fname" type="text" placeholder="First Name*" required>
+              <input class="input-box" id="fname" type="text" placeholder="First Name*" value="<?php echo $firstName;?>" name="first_name" required>
             </div>
 
             <div class="data-input">
               <label for="lname"></label>
-              <input type="text" id="lname" placeholder="Last Name*" required>
+              <input class="input-box" type="text" id="lname" placeholder="Last Name*" value="<?php echo $lastName;?>" name="last_name" required >
             </div>
 
           </div>
 
             <div class="data-input">
               <label for="e-mail"></label>
-              <input type="email" id="e-mail" placeholder="E-mail Address*" required>
+              <input class="input-box" type="email" id="e-mail" placeholder="E-mail Address*" value="<?php echo $email;?>" name="email" required>
             </div>
 
             <div class="data-input">
               <label for="subject"></label>
-              <input type="text" id="subject" placeholder="Subject*" required>
+              <input class="input-box" type="text" id="subject" placeholder="Subject*" value="<?php echo $subject;?>" name="subject" required>
             </div>
 
             <div class="data-input">
               <label for="message"></label>
-              <input type="text" id="message" placeholder="Message*" required>
+              <textarea class="input-box" type="text" id="message" placeholder="Message*" value="<?php echo $message;?>" name="message" required></textarea>
             </div>
             
             <div class="btn-submit">
@@ -264,6 +178,5 @@
   <script src="js/slick/slick.min.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/hero.js"></script>
-  <!-- <script src="../js/darkmode.js"></script> -->
   </body>  
 </html>

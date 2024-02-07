@@ -1,93 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <!-- =======================================
-  ===========HEAD ==================== -->
-
-<head>
-<meta charset="utf-8">
-<meta name="description" content="Trainee web developer portfolio website.">
-<meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, SCS scheme, Scion Coalition Scheme">
-<meta name="author" content="Lemuel Walkinshaw">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="js/slick/slick.css">
-<link rel="stylesheet" href="js/slick/slick-theme.css">
-<link rel="icon" href="img/purple-triangle.jpg">
-<link rel="stylesheet" href="scss/application.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/fac1c8a231.js" crossorigin="anonymous"></script>
-<title>Lemuel Walkinshaw Portfolio</title>
-</head>
-
-  <!-- =======================================
-  =========== Body ==================== -->
-
-  <body>
-
-<!-- =============Side Nav ============= -->
-
-
-  <header id="nav-lo">
-
-    <nav>
-      <div>
-        <div class="nav-link-initials"><a href="index.html">LW</a></div>
-        <ul>
-          <li class="nav-link"><a href="about.html">About Me</a></li>
-          <li class="nav-link"><a href="index.html#portfolio">My Portfolio</a></li>
-          <li class="nav-link"><a href="coding.html">Coding Examples</a></li>
-          <li class="nav-link"><a href="scs.html">SCS Scheme</a></li>
-          <li class="nav-link"><a href="index.html#contact">Contact Me</a></li>
-          <li class="nav-link"><a class="nav-link-item" target="_blank" rel="noopener" href="https://github.com/LemWalk"><i class="fa-brands fa-github"></i>My GitHub</a></li>
-
-        </ul>
-      </div>
-    </nav>    
-
-  </header>
-
-<!-- =============Main Start ============= -->
-
-  <main>
-    <div class="container">
-
-      <div id="hero-lo" >        
-        <div class="hero-container" style="background-image: url(./img/pb-triangle-1.jpg);">
-
-<!-- ================ toggle button ================ -->
-          <div id="menu-btns">
-
-        <!-- <div class="form-box">
-          <div class="button-box">
-            <div id="btn"></div>
-            <button type="button" class="toggle-btn" onclick="leftClick()"><i class="fa-solid fa-sun"></i></button>
-            <button type="button" class="toggle-btn" onclick="rightClick()"><i class="fa-solid fa-moon"></i></button>
-          </div>
-        </div> -->
-
-<!-- ===============burger-menu ===================== -->
-
-          <div class="off-screen-menu">
-            <ul class="off-screen-menu-list">
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="index.html">Home</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="about.html">About Me</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="index.html#portfolio">My Portfolio</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="coding.html">Coding Examples</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="scs.html">SCS Scheme</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" href="index.html#contact">Contact Me</a></li>
-              <li class="nav-link-off-screen"><a class="nav-link-item" target="_blank" rel="noopener" href="https://github.com/LemWalk"><i class="fa-brands fa-github"></i>My GitHub</a></li>
-            </ul>
-          </div>
-
-          <div class="burger-menu">
-            <div class="ham-bar bar-top"></div>
-            <div class="ham-bar bar-mid"></div>
-            <div class="ham-bar bar-bot"></div>
-          </div>
-
-        </div>
+<?php 
+include'inc/form_validation.php';
+include'inc/header.php'; 
+?>
 
 <!-- ==================== hero text ================ -->
 
@@ -122,7 +36,7 @@
             <div class="port-item">
               <a rel="noopener" href="https://netmatters.lemuel-walkinshaw.netmatters-scs.co.uk/" target="_blank">
                 <div class="port-img" style="background-image: url(./img/netmatters-reflection-screenshot.jpg);">
-                  <span class="port-img-text">I created a rebuild of the Netmatters homepage using HTML, CSS, SASS and JavaScript</span>
+                  <span class="port-img-text">I created a rebuild of the Netmatters homepage using HTML, CSS, JavaScript and PHP</span>
                 </div>
                 <div class="port-info">
                   <h3>Project 1</h3>
@@ -132,9 +46,9 @@
             </div>
 
             <div class="port-item">
-              <a href="#">
-                <div class="port-img" style="background-image: url(./img/pb-triangle-bg.jpg);">
-                  <span class="port-img-text">I am nothing but a placeholder, awaiting an epic project!</span>
+              <a rel="noopener" href="https://js-array.lemuel-walkinshaw.netmatters-scs.co.uk/" target="_blank">
+                <div class="port-img" style="background-image: url(./img/js-array.jpg);">
+                  <span class="port-img-text">I have created a JavaScript project that assigns images to unique email addresses using multi-dimensional arrays, with built in validation and error alerts .</span>
                 </div>
                 <div class="port-info">
                   <h3>Project 2</h3>
@@ -215,40 +129,90 @@
 
         </div>
 
-        <form class="form-contact" action="#" method="get">
+        <form class="form-contact" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> ">
           <div class="form-inner">
+
+          <?php 
+                    
+                    if($_SESSION['form_valid'] == true) { 
+                        echo "<div class=\"submit_message_box\"> ";
+                        echo " <div  class=\"submit-successful \">Submission Successful!<i class=\" submit_message_close fa-solid fa-x fa-xs\"></i></div> ";
+                        echo "</div> ";                        
+                    }
+
+                    if(
+                        !empty($firstNameErr) ||
+                        !empty($lastNameErr) ||
+                        !empty($emailErr) ||
+                        !empty($subjectErr) ||
+                        !empty($messageErr)) 
+                            { 
+                                echo "<div class=\"submit_message_box\"> ";
+                                echo " <div  class=\"submit-failed\">Submission Unsuccessful: <br><br> ";
+                                
+                                if(!empty($firstNameErr)){
+                                    echo htmlspecialchars("First name error: $firstNameErr");
+                                    echo "<br><br>";
+                                }
+
+                                if(!empty($lastNameErr)){
+                                  echo htmlspecialchars("Last name error: $lastNameErr");
+                                  echo "<br><br>";
+                              }
+
+                                if(!empty($emailErr)){
+                                    echo htmlspecialchars("Email error: $emailErr");
+                                    echo"<br><br>";
+                                }
+
+                                if(!empty($subjectErr)){
+                                    echo htmlspecialchars("Telephone error: $subjectErr");
+                                    echo"<br><br>";
+                                }
+
+                                if(!empty($messageErr)){
+                                  echo htmlspecialchars("Telephone error: $messageErr");
+                                  echo"<br><br>";
+                              }
+                                
+                                
+                                echo" <i class=\" submit_message_close_error fa-solid fa-x fa-xs\"></i></div> ";
+                                echo "</div> ";                        
+                            };
+
+                        ?>   
 
             <div class="input-names">
 
             <div class="data-input">
-              <label for="fname"></label>
-              <input id="fname" type="text" placeholder="First Name*" required>
+              <label for="first_name"></label>
+              <input class="input-box" id="first_name" type="text" placeholder="First Name*" value="<?php echo $firstName;?>" name="first_name" required <?php if(!empty($firstNameErr)) {echo 'style="border: 3px solid #a94442 !important;"';} ?>>
             </div>
 
             <div class="data-input">
-              <label for="lname"></label>
-              <input type="text" id="lname" placeholder="Last Name*" required>
+              <label for="last_name"></label>
+              <input class="input-box" type="text" id="last_name" placeholder="Last Name*" value="<?php echo $lastName;?>" name="last_name" required <?php if(!empty($lastNameErr)) {echo 'style="border: 3px solid #a94442 !important;"';} ?>>
             </div>
 
           </div>
 
             <div class="data-input">
               <label for="e-mail"></label>
-              <input type="email" id="e-mail" placeholder="E-mail Address*" required>
+              <input class="input-box" type="email" id="e-mail" placeholder="E-mail Address*" value="<?php echo $email;?>" name="email" required <?php if(!empty($emailErr)) {echo 'style="border: 3px solid #a94442 !important;"';} ?>>
             </div>
 
             <div class="data-input">
               <label for="subject"></label>
-              <input type="text" id="subject" placeholder="Subject*" required>
+              <input class="input-box" type="text" id="subject" placeholder="Subject*" value="<?php echo $subject;?>" name="subject" required <?php if(!empty($subjectErr)) {echo 'style="border: 3px solid #a94442 !important;"';} ?>>
             </div>
 
             <div class="data-input">
               <label for="message"></label>
-              <input type="text" id="message" placeholder="Message*" required>
+              <textarea class="input-box" type="text" id="message" placeholder="Message*" value="<?php echo $message;?>" name="message" required <?php if(!empty($messageErr)) {echo 'style="border: 3px solid #a94442 !important;"';} ?>></textarea>
             </div>
             
             <div class="btn-submit">
-              <input type="submit" value="submit">
+              <button type="submit" class="form-submit-button"> Submit</button>
             </div>
 
         </div>
@@ -264,6 +228,5 @@
   <script src="js/slick/slick.min.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/hero.js"></script>
-  <!-- <script src="../js/darkmode.js"></script> -->
   </body>  
 </html>

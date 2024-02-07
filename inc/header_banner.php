@@ -11,6 +11,9 @@
 <meta name="author" content="Lemuel Walkinshaw">
 <link rel="icon" href="img/purple-triangle.jpg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="js/slick/slick.css">
+<link rel="stylesheet" href="js/slick/slick-theme.css">
+<link rel="stylesheet" href="scss/prism.css">
 <link rel="stylesheet" href="scss/application.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

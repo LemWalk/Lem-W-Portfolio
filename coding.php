@@ -1,91 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-  <!-- =======================================
-  ===========HEAD ==================== -->
-
-<head>
-<meta charset="utf-8">
-<meta name="description" content="Trainee web developer portfolio website.">
-<meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, SCS scheme, Scion Coalition Scheme">
-<meta name="author" content="Lemuel Walkinshaw">
-<link rel="icon" href="img/purple-triangle.jpg">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="js/slick/slick.css">
-<link rel="stylesheet" href="js/slick/slick-theme.css">
-<link rel="stylesheet" href="scss/prism.css">
-<link rel="stylesheet" href="scss/application.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/fac1c8a231.js" crossorigin="anonymous"></script>
-<title>Coding Examples</title>
-</head>
-
-
-<body>
-
-  <header id="nav-lo">
-
-    <nav>
-      <div>
-        <div class="nav-link-initials"><a href="index.html">LW</a></div>
-        <ul>
-          <li class="nav-link"><a href="about.html">About Me</a></li>
-          <li class="nav-link"><a href="index.html#portfolio">My Portfolio</a></li>
-          <li class="nav-link"><a href="coding.html">Coding Examples</a></li>
-          <li class="nav-link"><a href="scs.html">SCS Scheme</a></li>
-          <li class="nav-link"><a href="index.html#contact">Contact Me</a></li>
-          <li class="nav-link"><a target="_blank" rel="noopener" href="https://github.com/LemWalk"><i class="fa-brands fa-github"></i>My GitHub</a></li>
-
-        </ul>
-      </div>
-    </nav>    
-
-  </header>
-
-  <main>
-    
-
-      <div class="banner-top">
-        <div class="banner-inner">
-
-          <h1 class="banner-title">Coding Examples</h1>
-      
-          <div id="menu-btns">
-      
-            <!-- <div class="form-box">
-              <div class="button-box">
-                <div id="btn"></div>
-                <button type="button" class="toggle-btn" onclick="leftClick()"><i class="fa-solid fa-sun"></i></button>
-                <button type="button" class="toggle-btn" onclick="rightClick()"><i class="fa-solid fa-moon"></i></button>
-              </div>
-            </div> -->
-      
-      <!-- ===============burger-menu ===================== -->
-      
-              <div class="off-screen-menu">
-                <ul class="off-screen-menu-list">
-                  <li class="nav-link-off-screen"><a href="index.html">Home</a></li>
-                  <li class="nav-link-off-screen"><a href="about.html">About Me</a></li>
-                  <li class="nav-link-off-screen"><a href="index.html#portfolio">My Portfolio</a></li>
-                  <li class="nav-link-off-screen"><a href="coding.html">Coding Examples</a></li>
-                  <li class="nav-link-off-screen"><a href="scs.html">SCS Scheme</a></li>
-                  <li class="nav-link-off-screen"><a href="index.html#contact">Contact Me</a></li>
-                  <li class="nav-link-off-screen"><a target="_blank" rel="noopener" href="https://github.com/LemWalk"><i class="fa-brands fa-github"></i>My GitHub</a></li>
-                </ul>
-              </div>
-      
-              <div class="burger-menu">
-                <div class="ham-bar bar-top"></div>
-                <div class="ham-bar bar-mid"></div>
-                <div class="ham-bar bar-bot"></div>
-              </div>
-      
-          </div>   
-
-    </div>
-      </div>
+<?php 
+$pageTitle = 'Coding Examples'; 
+$bannerTitle = 'Coding Examples';
+include 'inc/header_banner.php';
+?>
 
       <div class="container-inner">
 
@@ -183,6 +100,108 @@
         </div> 
       </div>
 
+
+      <div class="placeholder">
+        <h2 class="placeholder-title">PHP Form Validation Function</h2>
+          <div class="img-container">
+            <p class="img-desc">
+            Here is a block of PHP code that validates the inputs of a form against custom regular expressions.
+            If the input values are valid then the data will be accepted and submitted to a database.
+            If the data is not valid then the code will reject the input and display an error message to alert the user.  
+            </p>
+          </div>
+      
+        <div class="code-block">   
+          <pre class="code-example">
+            <code class="language-javascript line-numbers" tabindex="0">              
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+                if (empty($_POST["first_name"])) {
+                    $firstNameErr = "First name is required";
+                } else {            
+                    $firstName = test_input($_POST["first_name"]);
+                    if (!preg_match("/^[a-zA-Z-' ]*$/",$firstName)) {
+                        $firstNameErr = "Only letters and white space allowed";
+                    }
+                }    
+
+                if (empty($_POST["last_name"])) {
+                    $lastNameErr = "Last name is required";
+                } else {            
+                    $lastName = test_input($_POST["last_name"]);
+                    if (!preg_match("/^[a-zA-Z-' ]*$/",$lastName)) {
+                        $lastNameErr = "Only letters and white space allowed";
+                    }
+                }
+
+
+                if (empty($_POST["email"])) {
+                    $emailErr = "Email is required";
+                } else {
+                    $email = test_input($_POST["email"]);
+                    if (!preg_match($emailRegex, $email)) {
+                        $emailErr = "Invalid email";
+                    }
+                }
+
+
+                if (empty($_POST["subject"])) {
+                    $subjectErr = "Subject is required";
+                } else {
+                        $subject = test_input($_POST["subject"]);
+                }    
+
+
+                if (empty($_POST["message"])) {
+                    $messageErr = "Message is required";
+                } else {
+                    $message = test_input($_POST["message"]);
+                }
+
+
+                if (
+                    empty($firstNameErr) &&
+                    empty($lastNameErr) &&
+                    empty($emailErr) &&
+                    empty($subjectErr) &&
+                    empty($messageErr)
+                )   {
+                    
+                        try{
+
+                            $_SESSION['form_valid'] = true;
+
+                            require_once "connection.php";
+                            $query = "INSERT INTO client_details (first_name, last_name, email, subject, message) 
+                            VALUES ( :first_name , :last_name , :email , :subject, :message)";            
+
+                            $stmt = $conn->prepare($query);
+
+                            $stmt->bindParam(":first_name", $firstName);
+                            $stmt->bindParam(":last_name", $lastName);
+                            $stmt->bindParam(":email", $email);
+                            $stmt->bindParam(":subject", $subject);
+                            $stmt->bindParam(":message", $message);
+                            
+                            $stmt->execute();
+                        
+                            $conn = null;
+                            $stmt = null;
+                            header('Location: index.php#contact');
+                            die();
+                            
+
+                        } catch (PDOException $e) {
+                            die("Query Failed: " . $e->getMessage());
+                        }                    
+                    }                     
+                } 
+
+            </code>
+          </pre>
+      </div>
+      </div>
+
         
       </div>
 
@@ -210,8 +229,3 @@
   <script src="./js/darkmode.js"></script>
 </body>
 
-<pre>
-  <code>
-    
-  </code>
-</pre>

@@ -43,56 +43,56 @@ $emailRegex = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    //     if (empty($_POST["first_name"])) {
-    //         $firstNameErr = "First name is required";
-    //     } else {            
-    //         $firstName = test_input($_POST["first_name"]);
-    //         if (!preg_match("/^[a-zA-Z-' ]*$/",$firstName)) {
-    //             $firstNameErr = "Only letters and white space allowed";
-    //         }
-    //     }    
+        if (empty($_POST["first_name"])) {
+            $firstNameErr = "First name is required";
+        } else {            
+            $firstName = test_input($_POST["first_name"]);
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$firstName)) {
+                $firstNameErr = "Only letters and white space allowed";
+            }
+        }    
         
-    //     if (empty($_POST["last_name"])) {
-    //         $lastNameErr = "Last name is required";
-    //     } else {            
-    //         $lastName = test_input($_POST["last_name"]);
-    //         if (!preg_match("/^[a-zA-Z-' ]*$/",$lastName)) {
-    //             $lastNameErr = "Only letters and white space allowed";
-    //         }
-    //     }
+        if (empty($_POST["last_name"])) {
+            $lastNameErr = "Last name is required";
+        } else {            
+            $lastName = test_input($_POST["last_name"]);
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$lastName)) {
+                $lastNameErr = "Only letters and white space allowed";
+            }
+        }
 
     
-    //     if (empty($_POST["email"])) {
-    //         $emailErr = "Email is required";
-    //     } else {
-    //         $email = test_input($_POST["email"]);
-    //         if (!preg_match($emailRegex, $email)) {
-    //             $emailErr = "Invalid email";
-    //         }
-    // }
+        if (empty($_POST["email"])) {
+            $emailErr = "Email is required";
+        } else {
+            $email = test_input($_POST["email"]);
+            if (!preg_match($emailRegex, $email)) {
+                $emailErr = "Invalid email";
+            }
+    }
 
         
-    //     if (empty($_POST["subject"])) {
-    //         $subjectErr = "Subject is required";
-    //     } else {
-    //             $subjectErr = "Invalid subject number";
-    //     }    
+        if (empty($_POST["subject"])) {
+            $subjectErr = "Subject is required";
+        } else {
+                $subject = test_input($_POST["subject"]);
+        }    
 
 
-    //     if (empty($_POST["message"])) {
-    //         $messageErr = "Message is required";
-    //     } else {
-    //         $message = test_input($_POST["message"]);
-    //     }
+        if (empty($_POST["message"])) {
+            $messageErr = "Message is required";
+        } else {
+            $message = test_input($_POST["message"]);
+        }
     
     
-        // if (
-        //     empty($firstNameErr) &&
-        //     empty($lastNameErr) &&
-        //     empty($emailErr) &&
-        //     empty($subjectErr) &&
-        //     empty($messageErr)
-        // )   {
+        if (
+            empty($firstNameErr) &&
+            empty($lastNameErr) &&
+            empty($emailErr) &&
+            empty($subjectErr) &&
+            empty($messageErr)
+        )   {
             
                 try{
 
@@ -125,26 +125,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // $_SESSION['form_valid'] = false;
             } 
             
-    // } else {
-    //         // header("Location:./contact-us.php#contact-form-lo");
-    //     }
+    } else {
+            // header("Location:index.php#contact");
+        }
 
 
-
-        // if($_SESSION['form_valid'] == true){
-            // unset($_SESSION['form_valid']);
-            // $_SESSION['form_valid'] == false;
-        // }
-        
 
         session_destroy();
     
-
-        // $name = test_input($_POST["name"]);
-        // $company_name = test_input($_POST["company_name"]);
-        // $email = test_input($_POST["email"]);      
-        // $telephone = test_input($_POST["telephone"]);
-        // $message = test_input($_POST["message"]);
-
 
 ?>
